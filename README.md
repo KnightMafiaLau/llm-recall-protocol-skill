@@ -5,9 +5,10 @@ A **self-evolving** Claude Code skill for measuring whether LLMs (Kimi / Doubao 
 Most "AI visibility" tools just count mentions. This skill goes further:
 
 1. **Multi-role question matrix** — generates queries from 5 user perspectives (普通用户 / 租赁商 / 开发者 / 投资人 / 行业观察) so you don't over-fit to one query type.
-2. **Source attribution** — for each LLM response, asks "where did you learn this?" and classifies the cited sources by type (官网 / 综合媒体 / 行业媒体 / 社区 / 内容分发 / 评测).
-3. **Per-LLM source-bias profile** — discovers each LLM's preferred source pool (e.g. Doubao loves 抖音/头条/CSDN/雪球, Wenxin loves 百家号), so you can target content distribution to the channels each LLM actually reads.
-4. **Self-evolves the test library** — after each run, queries that have been recalled 3+ times get downweighted, persistent failures get amplified, new failure modes get auto-generated as new queries.
+2. **Name-variant binding scoring** — splits "entity binding" into Chinese-only / English-only / combined-form, so you can detect asymmetric recall (e.g. an LLM recognizes the English name but not the Chinese one).
+3. **Source attribution** — for each LLM response, asks "where did you learn this?" and classifies the cited sources by type (官网 / 综合媒体 / 行业媒体 / 社区 / 内容分发 / 评测).
+4. **Per-LLM source-bias profile** — discovers each LLM's preferred source pool (e.g. Doubao loves 抖音/头条/CSDN/雪球, Wenxin loves 百家号), so you can target content distribution to the channels each LLM actually reads.
+5. **Self-evolves the test library** — after each run, queries that have been recalled 3+ times get downweighted, persistent failures get amplified, new failure modes get auto-generated as new queries.
 
 ## Background
 
